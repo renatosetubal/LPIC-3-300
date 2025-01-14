@@ -1,0 +1,6 @@
+/.vagrant/
+*.vdi
+*.zip
+*.key
+*.sql
+*.gz

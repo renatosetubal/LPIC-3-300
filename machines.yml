@@ -1,0 +1,110 @@
+- name: srv01
+  cpus: 1
+  memory: 2048
+  netbr:
+  - tiporede: private_network
+    ipfixo: 192.168.3.10
+    dns: 8.8.8.8
+  ports:
+  - status: false
+    guest: 9000
+    host: 9000
+  box: iwit/debian12
+  boxversion: 0.1.0
+  script:
+  folder:
+
+
+- name: srv02
+  cpus: 1
+  memory: 1048
+  netbr:
+  - tiporede: private_network
+    ipfixo: 192.168.3.20
+    dns: 8.8.8.8
+  ports:
+  - status: false
+    guest: 3306
+    host: 3306
+  box: bento/debian-12
+  boxversion: 0.1.0
+  script:
+  folder:
+
+
+- name: srv03
+  cpus: 1
+  memory: 1048
+  netbr:
+  - tiporede: private_network
+    ipfixo: 192.168.3.30
+    dns: 8.8.8.8
+  ports:
+  - status: true
+    guest: 80
+    host: 8888
+  disks:
+  - status: false
+    size: 1GB
+    name: sdb
+  box: iwit/debian12
+  boxversion: 0.1.0
+  script:
+  folder:
+
+
+- name: srv04
+  cpus: 1
+  memory: 1048
+  netbr:
+  - tiporede: private_network
+    ipfixo: 192.168.3.40
+    dns: 8.8.8.8
+  ports:
+  - status: false
+    guest: 80
+    host: 8880
+  disks:
+  - status: false
+    size: 1GB
+    name: sdb
+  box: iwit/debian12
+  boxversion: 0.1.0
+  script:
+  folder:
+
+
+- name: srv05
+  cpus: 1
+  memory: 1048
+  netbr:
+  - tiporede: private_network
+    ipfixo: 192.168.3.50
+    dns: 8.8.8.8
+  ports:
+  - status: false
+    guest: 80
+    host: 8080
+  box: iwit/debian12
+  boxversion: 0.1.0
+  script:
+  folder:
+
+
+- name: srv06
+  cpus: 1
+  memory: 1048
+  netbr:
+  - tiporede: private_network
+    ipfixo: 192.168.3.60
+    dns: 8.8.8.8
+  ports:
+  - status: false
+    guest: 80
+    host: 8080
+  box: bento/debian-12
+  boxversion:
+  script:
+  folder:
+
+
